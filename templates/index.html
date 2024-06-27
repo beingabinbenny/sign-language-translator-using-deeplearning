@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Language Translator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <style>
+        * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+#ifgu{
+  background-repeat:repeat;
+  background-position:left top;
+  background-attachment:scroll;
+  background-size:auto;
+  background-image:linear-gradient(#fdfd0b 0%, #fdfd0b 100%);
+}
+.gjs-row{
+  display:flex;
+  justify-content:flex-start;
+  align-items:stretch;
+  flex-wrap:nowrap;
+  padding:10px;
+}
+.gjs-cell{
+  min-height:75px;
+  flex-grow:1;
+  flex-basis:100%;
+}
+#ibl2{
+  height:496px;
+}
+#isah{
+  border:5px solid black;
+  margin:0px 0px 0px 7px;
+  background-repeat:unset;
+  background-position:unset;
+  background-attachment:unset;
+  background-size:unset;
+  background-image:unset;
+  background-image-color:unset;
+  background-image-gradient:unset;
+  background-image-gradient-dir:unset;
+  background-image-gradient-type:unset;
+}
+#ia2k{
+  border:5px solid black;
+  background-repeat:repeat;
+  background-position:left top;
+  background-attachment:scroll;
+  background-size:auto;
+  background-image:linear-gradient(#ffffff 0%, #ffffff 100%);
+}
+#im3e{
+  border:5px solid black;
+  flex-basis:50%;
+}
+#ir9i{
+  border:5px solid black;
+  margin:0px 0px 0px 7px;
+  position:static;
+}
+#ijuh{
+  padding:10px;
+}
+#i9ylu{
+  width:70px;
+  height:70px;
+  border:5px solid black;
+  margin:0px 0px 0px 5px;
+}
+#iqcnu{
+  width:70px;
+  height:70px;
+  border:5px solid black;
+  margin:0px 0px 0px 5px;
+}
+#i96ly{
+  width:70px;
+  height:70px;
+  border:5px solid black;
+  margin:0px 0px 0px 5px;
+}
+#ighs2{
+  width:70px;
+  height:70px;
+  border:5px solid black;
+  margin:0px 0px 0px 5px;
+}
+#i528m{
+  margin:20px 0px 20px 110px;
+  width:300px;
+  height:70px;
+  border:5px solid black;
+}
+#i6num{
+  border:4px solid black;
+  background-repeat:repeat;
+  background-position:left top;
+  background-attachment:scroll;
+  background-size:auto;
+  background-image:linear-gradient(#ffffff 0%, #ffffff 100%);
+}
+#inlqt{
+  border:5px solid black;
+  margin:0px 0px 0px 7px;
+  background-repeat:repeat;
+  background-position:left top;
+  background-attachment:scroll;
+  background-size:auto;
+  background-image:linear-gradient(#ffffff 0%, #ffffff 100%);
+}
+#i19em{
+  padding:10px 10px 10px 10px;
+  margin:10px 0px 0px 0px;
+  text-align:center;
+  font-weight:700;
+  font-size:20px;
+  width:181px;
+}
+#i85jk{
+  padding:10px;
+  margin:10px 0px 0px 0px;
+  font-size:20px;
+  font-weight:700;
+}
+#isl3r{
+  padding:40px 10px 10px 50px;
+  height:110px;
+  border-radius:50px 50px 50px 0px;
+  border:7px solid black;
+  background-repeat:repeat;
+  background-position:left top;
+  background-attachment:scroll;
+  background-size:auto;
+  background-image:linear-gradient(#ffffff 0%, #ffffff 100%);
+}
+#i7fzo{
+  padding:40px 10px 10px 30px;
+  height:110px;
+  border:7px solid black;
+  border-radius:50px 50px 0px 50px;
+  background-repeat:repeat;
+  background-position:left top;
+  background-attachment:scroll;
+  background-size:auto;
+  background-image:linear-gradient(#ffffff 0%, #ffffff 100%);
+}
+#isumf{
+  margin:20px 0px 0px 0px;
+}
+#i90mj{
+  margin:20px 0px 0px 0px;
+}
+#ili5g{
+  flex-basis:10%;
+}
+#idpci{
+  flex-basis:10%;
+}
+#iw5zz{
+  font-size:20px;
+  border:0px solid black;
+  border-radius:50px 50px 50px 50px;
+  background-repeat:repeat;
+  background-position:left top;
+  background-attachment:scroll;
+  background-size:auto;
+  background-image:linear-gradient(#41bd30 0%, #41bd30 100%);
+  margin:90px 5px 0px 0px;
+  text-align:center;
+  padding:10px 0px 10px 0px;
+}
+#ingqe{
+  font-size:20px;
+  border:0px solid black;
+  border-radius:50px 50px 50px 50px;
+  background-repeat:repeat;
+  background-position:left top;
+  background-attachment:scroll;
+  background-size:auto;
+  background-image:linear-gradient(#e47c3d 0%, #e47c3d 100%);
+  margin:90px 0px 0px 5px;
+  text-align:center;
+  padding:10px 0px 10px 0px;
+}
+#ihrge{
+  border:5px solid black;
+}
+#iejxf{
+  padding:10px 100px 10px 100px;
+  float:none;
+  text-align:center;
+  margin:10px 0px 10px 0px;
+  font-size:25px;
+}
+@media (max-width: 992px){
+  #idpci{
+    flex-basis:10%;
+  }
+  #i528m{
+    width:300px;
+    margin:10px 0px 20px 6px;
+  }
+  #ir9i{
+    margin:0px 0px 0px 7px;
+  }
+}
+@media (max-width: 768px){
+  .gjs-row{
+    flex-wrap:wrap;
+  }
+}
+@media (max-width: 480px){
+  #iejxf{
+    font-size:14px;
+    padding:3px 10px 3px 10px;
+  }
+}
+.corner{
+
+width: 100%;
+height: auto; 
+
+}   
+
+
+    </style>
+</head>
+
+
+<body id="ifgu">
+    <div class="gjs-row" id="iww8i">
+      <div class="gjs-cell" id="ihrge">
+        <div id="iejxf">Sign Language Translator using Deep Learning to generate prompts for generative Ai
+        </div>
+      </div>
+    </div>
+    <div class="gjs-row" id="ibl2">
+      <div class="gjs-cell" id="ia2k">
+        
+        
+        <div id="ijuh">
+
+
+            <img src="{{ url_for('video') }}" class="corner">
+          
+        </div>
+
+
+
+      </div>
+      <div class="gjs-cell" id="isah">
+        <div class="gjs-row" id="isumf">
+          <div class="gjs-cell" id="idpci">
+            {% if user %}
+            <div id="iw5zz">GN
+            </div>
+
+          </div>
+          <div class="gjs-cell" id="ihsnr">
+            
+            <div id="isl3r">
+                <p>{{ user }}</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="gjs-row" id="i90mj">
+          <div class="gjs-cell">
+            
+            <div id="i7fzo">
+                <p>{{ response }}</p>
+            </div>
+
+          </div>
+          <div class="gjs-cell" id="ili5g">
+            
+            <div id="ingqe">YOU
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gjs-row" id="ir0k">
+      <div class="gjs-cell" id="im3e">
+        <div class="gjs-row" id="i4m7j">
+          <div class="gjs-cell" id="i6num">
+            <div id="i19em">current detection :
+            </div>
+          </div>
+          <div class="gjs-cell" id="inlqt">
+            
+            
+            
+            <div id="i85jk">what is detected 
+
+
+                <input type="text" id="class_name" readonly>
+                
+                <script>
+                    function updateClassName() {
+                        $.ajax({
+                            url: "/get_class_name",
+                            type: "GET",
+                            success: function(data) {
+                                $('#class_name').val(data);
+                            },
+                            error: function() {
+                                $('#class_name').val('Error fetching class name.');
+                            }
+                        });
+                    }
+                    // Update class name every second
+                    setInterval(updateClassName, 1000);
+                </script>
+
+<input type="text" id="class_name_2" name = "class_name_2">
+<button onclick="addToClassName()">Add</button>
+
+<script>
+
+    function addToClassName() {
+        $.ajax({
+            url: "/get_class_name",
+            type: "GET",
+            success: function(data) {
+                let currentValue = $('#class_name_2').val();
+                let newValue = currentValue + data;
+                $('#class_name_2').val(newValue);
+            },
+        });
+    }
+
+    // Update class name every second
+    setInterval(updateClassName, 1000);
+</script>
+
+<button onclick="addToGtp()">Sent-gtp</button>
+<script>
+
+  function addToGtp() {
+      $.ajax({
+          url: "/get_class_name",
+          type: "GET",
+          success: function(data) {
+              let currentValue = $('#class_name_2').val();
+              let newValue = currentValue;
+              $('#i528m').val(newValue);
+          },
+      });
+  }
+
+  // Update class name every second
+  setInterval(updateClassName, 1000);
+</script>
+
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="gjs-cell" id="ir9i">
+
+
+    <form method="POST">
+
+        <input type="text" name="myTextBox" id="i528m" placeholder="Enter your prompt"/>
+
+        <input type="submit" value="Send" id="ighs2">
+
+
+    </form>
+      </div>
+    </div>
+  </body>
+
+
+
+</html>
